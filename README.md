@@ -22,7 +22,7 @@ This project implements an **audio signal restoration** technique based on *spec
 
 1. **Clone the repository**:
    ```bash
-   git clone https://gitlab.fing.edu.uy/rodrigo.torrado/denoisify-spectral-subtraction.git
+   git clone https://github.com/RoTorrado/denoisify-spectral-subtraction.git
    cd denoisify-spectral-subtraction
    
 2. **Create and activate a conda environment**:
@@ -34,9 +34,17 @@ This project implements an **audio signal restoration** technique based on *spec
     ```bash
    pip install .
    
+4. **Associate the conda environment with Jupyter Notebook:**
+
+    To use the **`denoisify`** environment as a kernel in Jupyter Notebook, run the following commands:
+
+    ```bash
+    conda install ipykernel
+    python -m ipykernel install --user --name=denoisify --display-name "Python (denoisify)"    
+   
 ## 📓 Example of Use
 
-To demonstrate how to use **Denoisify**, an example Jupyter notebook, **`Example_Denoisify_SS.ipynb`**, is provided in this repository. The notebook guides you through the process of applying the **spectral subtraction** technique to a noisy audio signal. It includes the following steps:
+To demonstrate how to use **Denoisify - Spectral Subtraction**, an example Jupyter notebook, **`Example_Denoisify_SS.ipynb`**, is provided in this repository. The notebook guides you through the process of applying the **spectral subtraction** technique to a noisy audio signal. It includes the following steps:
 
 1. **Loading Audio Files**: It loads both the noisy audio signal and the noise source.
 2. **Parameter Adjustments**: You can modify parameters like FFT size, overlap, and thresholds to fine-tune the denoising process.
@@ -45,6 +53,16 @@ To demonstrate how to use **Denoisify**, an example Jupyter notebook, **`Example
 5. **Listening to Results**: It allows you to listen to intermediate components (like the transient, sinusoidal, and modeled noise) as well as the final denoised output.
 
 The **Jupyter notebook** provides an easy-to-follow workflow for using this technique in various audio signal restoration tasks.
+
+If you prefer to run **Denoisify - Spectral Subtraction** directly from the command line, you can execute:
+
+    spectral-subtraction --help
+
+This will display the available options and arguments. The basic syntax for running the tool is:
+    
+    spectral-subtraction [options] input_file output_file
+
+Both **input_file** and **output_file** must be **.wav** audio files. The tool supports both mono and stereo formats.
 
 ---
 

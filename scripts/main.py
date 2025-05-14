@@ -2,7 +2,7 @@ import argparse
 import numpy as np
 import time
 from scipy.io.wavfile import read, write
-from ss import denoisify_ss
+from scripts import denoisify_ss
 
 class CustomHelpFormatter(argparse.ArgumentDefaultsHelpFormatter):
     def __init__(self, *args, **kwargs):
