@@ -1,0 +1,7 @@
+numpy
+scipy
+argparse
+sms-tools
+matplotlib
+librosa
+
